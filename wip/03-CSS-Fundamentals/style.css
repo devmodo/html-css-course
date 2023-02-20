@@ -31,12 +31,28 @@ li {
     font-size: 20px;
 }
 
-/*Example of descendant selector*/
+/*Example of descendant selector
 footer p {
     font-size: 16px;
 }
+*/
 
 /*ID selector. Don't use this anymore either.*/
 #author {
     font-style: italic;
+    font-size: 18px;
+}
+
+#copyright {
+    font-size: 16px;
+}
+
+/*Class selector*/
+.related-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.related-posts-list {
+    list-style: none;
 }
