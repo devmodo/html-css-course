@@ -36,6 +36,34 @@ li {
     font-size: 20px;
 }
 
+/*
+    A psuedo-class of li that selects the first-child of all li elements.
+*/
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+/*In the nth child, specify the number in ().
+li:nth-child(2) {
+    color: red;
+}
+*/
+
+/*The following can be useful for alternating rows in a table.*/
+/*
+li:nth-child(odd) {
+    color: red;
+}
+
+li:nth-child(even) {
+    color: blue;
+}
+*/
+
 /*Example of descendant selector
 footer p {
     font-size: 16px;
@@ -70,4 +98,43 @@ aside {
     background-color: #f7f7f7;
     border-top: 5px solid #1098ad;
     border-bottom: 5px solid #1098ad;
+}
+
+/* Styling links */
+/* LVHA */
+a:link {
+    color: #1098ad;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1098ad;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: underline orangered;
+}
+
+a:active {
+    background-color: black;
+    font-style: italic;
+}
+
+/* Resolving Conflict */
+#copyright {
+    color: red;
+}
+
+.copyright {
+    color: blue;
+}
+
+.text {
+    color: yellow;
+}
+
+footer p {
+    color: green;
 }
