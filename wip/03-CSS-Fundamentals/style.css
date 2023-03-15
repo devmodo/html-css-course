@@ -17,7 +17,6 @@ body {
     width: 1200px;
     /*This will split the page and center the content in the container.*/
     margin: 0 auto;
-    position: relative;
 }
 
 .main-header {
@@ -200,3 +199,15 @@ a:active {
     font-style: italic;
 }
 
+/*pseudo-element uses :: */
+/*In this case the first letter is the book emoji.*/
+h1::first-letter {
+    font-style: normal;
+    margin-right: 5px;
+}
+
+/*adjacent siblings*/
+/*This syntax only makes red the first line */
+h3 + p::first-line {
+    color: red;
+}
