@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+        
       .el--1 {
         background-color: blueviolet;
+        align-self: flex-start;
+        order: 2;
       }
       .el--2 {
         background-color: orangered;
@@ -18,12 +21,15 @@
       }
       .el--4 {
         background-color: goldenrod;
+        align-self: flex-end;
       }
       .el--5 {
         background-color: palevioletred;
+        order: 1; /*moves items to the end.*/
       }
       .el--6 {
         background-color: steelblue;
+        order: -1; /*moves items to the beginning of the list; all default to zero.*/
       }
       .el--7 {
         background-color: yellow;
@@ -36,10 +42,15 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 34px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        /*A flex container will be as tall as the tallest element in it.*/
+        justify-content: flex-start;
+        gap: 30px;
       }
     </style>
   </head>
