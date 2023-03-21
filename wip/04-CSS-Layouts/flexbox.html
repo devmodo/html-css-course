@@ -7,7 +7,15 @@
     <title>Flexbox</title>
     <style>
         
-      .el--1 {
+      .el {
+        flex: 0 0 200px; /*flex-shrink, flex-grow, flex-basis all in one command.*/
+        
+        /*flex-basis: 200px; this is a minimum width not fixed width.*/
+            /*this will also not cause a container overflow.*/
+        /*flex-shrink: 0; this will prevent shrinking which can cause container overflow.*/
+        /*flex-grow: 1;*/
+      }
+        .el--1 {
         background-color: blueviolet;
         align-self: flex-start;
         order: 2;
