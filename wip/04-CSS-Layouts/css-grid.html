@@ -11,25 +11,34 @@
       }
       .el--2 {
         background-color: orangered;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        height: 100px;
+        align-self: start;
+        justify-self: center;
       }
       .el--4 {
         background-color: goldenrod;
       }
       .el--5 {
         background-color: palevioletred;
+        grid-row: 3 / 6;
       }
       .el--6 {
         background-color: steelblue;
+        grid-row: 3 / 6;        
       }
       .el--7 {
         background-color: yellow;
       }
       .el--8 {
         background-color: crimson;
+        grid-column: 2 / 3; /*start at column 2 end at 3.*/
+        grid-row: 1 / 2; /*start at row 1 and end at 2.*/
+        /*span rows and columns by increasing the start and end values.*/
       }
 
       .container--1 {
@@ -37,22 +46,45 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
-        margin: 40px;
+        /*margin: 40px;*/
+        width: 1800px;
+        height: 400px;
 
         /* CSS GRID */
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr auto;*/
+        grid-template-columns: repeat(4, 1fr);
+        /*grid-template-rows: 300px 200px;*/
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 40px;
+        
       }
 
       .container--2 {
         /* STARTER */
+        /*display: none;*/ /*hide an element and everything in it.*/
         font-family: sans-serif;
-        background-color: black;
+        background-color: rgb(227, 227, 227);
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 20px;
+
+        /*Aligning tracks in a container only possible when the container is bigger than the grid.*/
+        justify-content: center;
+        align-content: center;
+
+        /*Aligning items INSIDE cells*/
+        align-items: center;
+        justify-items: center;
       }
     </style>
   </head>
@@ -70,6 +102,7 @@
 
     <div class="container--2">
       <div class="el el--1">(1)</div>
+      <div class="el el--2">(2)</div>
       <div class="el el--3">(3)</div>
       <div class="el el--4">(4)</div>
       <div class="el el--5">(5)</div>
